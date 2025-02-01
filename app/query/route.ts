@@ -49,6 +49,7 @@ async function listInvoices() {
     }
 }
 
+//Testing
 export async function GET() {
     try {
         return Response.json(await listInvoices());
