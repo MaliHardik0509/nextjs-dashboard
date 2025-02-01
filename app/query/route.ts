@@ -30,7 +30,9 @@
 
 import { Pool } from "@neondatabase/serverless";
 
-const pool = new Pool();
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+});
 
 async function listInvoices() {
     const client = await pool.connect();
